@@ -57,7 +57,6 @@ def newpost():
 		return render_template('bloglist.html', blogs=blogs)
 	
 	return render_template('newpost.html')
-	#return render_template('newpost.html', title_error=title_error, body_error=body_error)
 	
 @app.route('/', methods=['POST', 'GET'])
 def index():
