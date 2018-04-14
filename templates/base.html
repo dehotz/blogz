@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{title}}</title>
+		<style>
+			.error {
+				color: red;
+			}
+			
+			h1 {
+				text-align: center;
+			}
+
+			.hyperlinks {
+				font-size: 16px;
+				padding-right: 10px;
+			}
+			
+			#inline-links {
+				overflow:hidden;
+				display:inline;
+			}
+			
+		</style>
+	</head>
+	<body>
+	
+		<div id='inline-links'>
+			<a class='hyperlinks' href='/blog'>Main Blog Page</a> 
+			<a class='hyperlinks' href='/newpost'>Add a Blog Entry</a>
+		</div>
+		
+		{% block content %}
+		{% endblock %}
+	
+	</body>
+</html>
