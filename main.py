@@ -62,10 +62,10 @@ def newpost():
 		flash_error = ""
 		
 		if title == '':
-			flash_error = "Please fill in the title." ##refactor for flash messaging
+			flash_error = "Please fill in the title."
 		
 		if body == '':
-			flash_error = "Please fill in the body." ##refactor for flash messaging
+			flash_error = "Please fill in the body."
 
 		if not flash_error:
 			new_entry = Blog(title, body, current_user())
@@ -87,7 +87,6 @@ def index():
 	users = User.query.all()
 
 	return render_template('index.html', users=users)
-	#return redirect('/blog')
 	
 def current_user():
 	current_user = User.query.filter_by(username=session['username']).first()
@@ -151,7 +150,6 @@ def signup():
 			flash("Logged in")
 			return redirect('/')
 		else:
-			#todo - user better response messaging ##Probably do the flash error messaging also
 			flash(flash_error, 'error')
 			return redirect('/signup')		
 		
