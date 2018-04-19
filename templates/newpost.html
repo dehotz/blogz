@@ -6,14 +6,11 @@
     <div>
 		<label for="title">Title for your new blog:</label><br/>
 		<input name="title" type="text" value="{{ title }}">
-		<p class="error">{{title_error}}</p>
-	</div>
+	</div><br />
     <div>
 		<label for="body">Your new blog:</label><br/>
 		<textarea name="body" cols="86" rows ="10" value="{{ body }}">{{body}}</textarea>
-		<p class="error">{{body_error}}</p>
-    </div>
-    
+    </div><br />
     <input type="submit" value="Add Entry">
 </form>
 {% endblock %}

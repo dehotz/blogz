@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-	<h1>Build a Blog</h1>
+		
+	<h1>Blog Posts!</h1>
 		
 	{% for blog in blogs %}
 		<a href='/blog?id={{blog.id}}'><h2>{{blog.title}}</h2></a>

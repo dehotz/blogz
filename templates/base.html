@@ -21,16 +21,41 @@
 				display:inline;
 			}
 			
-			
+			#login-logout {
+				float: right;
+			}
 			
 		</style>
 	</head>
 	<body>
 	
 		<div id='inline-links'>
-			<a class='hyperlinks' href='/blog'>Main Blog Page</a> 
-			<a class='hyperlinks' href='/newpost'>Add a Blog Entry</a>
+			<a class='hyperlinks' href='/'>Home</a> 
+			<a class='hyperlinks' href='/blog'>All Posts</a> 
+			<a class='hyperlinks' href='/newpost'>New Post</a>
 		</div>
+		
+		<div id='login-logout'>
+			{% if 'username' in session %}
+				{{session['username']}}
+				<form action='/logout' method='POST' id='logout'>
+					<input type="submit" value="Log Out" />
+				</form>
+			{% else %}
+				<a href="/login">Login</a> | <a href="/signup">Signup</a> 
+			{% endif %}
+		</div>
+		
+		{% with messages = get_flashed_messages(with_categories=True) %}
+			{% if messages %}
+				<ul >
+					{% for category,message in messages %}
+					<li class="{{category}}">{{ message }}</li>
+					{% endfor %}
+				</ul>
+			{% endif %}					
+		{% endwith %}
+		
 		
 		{% block content %}
 		{% endblock %}

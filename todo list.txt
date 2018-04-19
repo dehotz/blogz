@@ -1,0 +1,31 @@
+still todo
+
+We will also add a singleUser.html template that will be used to display only the blogs associated with a single given author. It will be used when we dynamically generate a page using a GET request with a user query parameter on the /blog route (similar to how we dynamically generated individual blog entry pages in the last assignment). ////DONE
+
+
+changing register.html and handlers to be 'signup' //////////////DONE
+
+
+logout needs to handle post request (would be posting the user in the session to del it and then redirecting?) /////////////DONE
+
+
+after login redirect to new post page, not main page ////////////////DONE
+
+
+validation for incorrect password or username on the login pages and register //////////////DONE
+
+
+fix base html to look better ////DONE
+
+
+useful links
+
+https://education.launchcode.org/web-fundamentals/classes/
+
+https://github.com/LaunchCodeEducation/flicklist-flask/blob/studio9/main.py
+
+https://github.com/LaunchCodeEducation/flicklist-flask/blob/studio9/templates/base.html
+
+http://blogz-demo.appspot.com/login
+
+
